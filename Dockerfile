@@ -6,3 +6,8 @@ RUN apk update && apk add --no-cache nginx git
 
 # Clone the repository
 RUN git clone https://github.com/younginnovations/internship-challenges /tmp/internship-challenges
+
+# Copy the 'site' folder from the cloned repository to the nginx document root
+RUN cp -r /tmp/internship-challenges/devops/docker-me/ /usr/share/nginx/html/
+
+
