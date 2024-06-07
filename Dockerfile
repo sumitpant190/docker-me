@@ -13,3 +13,8 @@ RUN cp -r /tmp/internship-challenges/devops/docker-me/ /usr/share/nginx/html/
 # Copy the custom nginx.conf to the nginx configuration directory
 COPY nginx.conf /etc/nginx/nginx.conf
 
+# Expose NGINX port
+EXPOSE 80
+
+# Start NGINX
+CMD ["nginx", "-g", "daemon off;"]
